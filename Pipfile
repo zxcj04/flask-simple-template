@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+python-dotenv = "*"
+isort = "*"
+
+[packages]
+flask = "*"
+flask-cors = "*"
+pyyaml = "*"
+gunicorn = "*"
+pymongo = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+format = "python ./scripts/format.py"
+dev = "flask run --debug"
+prod = "gunicorn -c configurations/gunicorn.conf.py 'template:create_app()'"

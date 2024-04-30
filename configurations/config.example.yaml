@@ -1,0 +1,9 @@
+app:
+  prefix: ""  #  '/template'
+
+database:
+  host:
+  port:
+  user:
+  pwd:
+  db:
